@@ -4,10 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "start:prod": "node dist/apps/api/main.js",
+    "build": "nx build api --prod",
+    "test": "nx test",
+    "postinstall": "npm run prestart:prod",
+    "heroku-postbuild": "nx build $PROJECT_NAME --prod"
   },
   "private": true,
   "dependencies": {
@@ -19,12 +20,18 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@nestjs/axios": "0.0.3",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/platform-socket.io": "^8.2.4",
+    "@nestjs/websockets": "^8.2.4",
     "@nrwl/angular": "13.3.9",
+    "dexie": "^3.2.0",
+    "ngx-socket-io": "^4.1.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.4.0",
+    "socket.io-client": "^4.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },

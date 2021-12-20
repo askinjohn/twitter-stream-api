@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "twitter-stream-surfwar"
+  },
+  "targets": {
+    "twitter-stream-surfwar": {
+      "hosting": {
+        "twitter-sample-stream": [
+          "twitter-stream-surfwar"
+        ]
+      }
+    }
+  }
+}

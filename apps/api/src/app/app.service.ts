@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { Message } from '@twitter-stream/api-interfaces';
+import { tap } from 'rxjs';
+import { DataService } from './data/data.service';
 
 @Injectable()
 export class AppService {
-  getData(): Message {
-    return { message: 'Welcome to api!' };
+  constructor(private ds:DataService){
+    
   }
 }

@@ -1,0 +1,22 @@
+.top-container{
+    height: 8vh;
+    width: 100%;
+    background-color: #1DA1F2;
+}
+
+img{
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title h2{
+    color: white;
+}

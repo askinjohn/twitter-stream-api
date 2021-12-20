@@ -1,0 +1,18 @@
+{
+  "hosting":[{
+    "target":"twitter-sample-stream",
+    "public": "dist/apps/twitter-sample-stream",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  {
+    "target":"api",
+    "public": "dist/apps/api",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }] 
+}

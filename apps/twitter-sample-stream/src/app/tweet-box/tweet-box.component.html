@@ -1,0 +1,11 @@
+
+<div class="tweets-container">
+<ng-container *ngIf='tweetsObs | async ; let tweets '>
+   <ng-container *ngFor='let t of tweets.data'>
+           <div class="tweet_cards">
+                <p>{{t.text}}</p>
+           </div>
+   </ng-container>
+   <button (click)='getOldTweets()' >Load More</button>
+</ng-container>
+</div>
